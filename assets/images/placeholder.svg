@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" width="800" height="500">
+  <rect width="800" height="500" fill="#F1F3F5"/>
+  <rect x="50" y="80" width="700" height="340" rx="12" fill="#E9ECEF"/>
+  <!-- House icon -->
+  <g transform="translate(340, 170)">
+    <polygon points="60,0 120,60 100,60 100,110 20,110 20,60 0,60" fill="#ADB5BD" opacity="0.6"/>
+    <rect x="40" y="75" width="25" height="35" rx="3" fill="#DEE2E6"/>
+    <rect x="55" y="90" width="6" height="10" fill="#ADB5BD"/>
+  </g>
+  <text x="400" y="340" font-family="Poppins, sans-serif" font-size="18" fill="#ADB5BD" text-anchor="middle" font-weight="500">No Image Available</text>
+  <text x="400" y="365" font-family="Poppins, sans-serif" font-size="13" fill="#CED4DA" text-anchor="middle">EstateHub Property</text>
+</svg>
