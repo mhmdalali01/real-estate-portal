@@ -6,8 +6,8 @@
 
 define('DB_HOST', 'localhost');
 define('DB_NAME', 'real_estate_portal');
-define('DB_USER', 'root');       // Change to your MySQL username
-define('DB_PASS', 'Mhmd2005@');           // Change to your MySQL password
+define('DB_USER', 'root');      
+define('DB_PASS', 'Mhmd2005@');           
 define('DB_CHARSET', 'utf8mb4');
 
 define('SITE_URL', 'http://localhost:8000');

@@ -13,7 +13,7 @@ if (file_exists(__DIR__ . '/.setup_done')) {
 define('DB_HOST', 'localhost');
 define('DB_NAME', 'real_estate_portal');
 define('DB_USER', 'root');   // ← change if needed
-define('DB_PASS', 'type your passwrod here');   // ← change if needed
+define('DB_PASS', 'Mhmd2005@');   // ← change if needed
 
 header('Content-Type: text/html; charset=utf-8');
 echo '<!DOCTYPE html><html><head><title>EstateHub Setup</title>

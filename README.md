@@ -171,6 +171,106 @@ All accounts use the password: **`password123`**
 
 ---
 
-## 📝 License
+## � Running the Application
+
+### Step 1: Verify MySQL is Running
+- Open MySQL/MariaDB service
+- Ensure it's active and accessible on `localhost:3306`
+- You can test this with your preferred MySQL client (HeidiSQL, phpMyAdmin, etc.)
+
+### Step 2: Create the Database
+Using HeidiSQL or MySQL command line:
+```sql
+CREATE DATABASE real_estate_portal CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
+```
+
+Or simply verify the database name matches `DB_NAME` in `config/db.php`:
+```php
+define('DB_NAME', 'real_estate_portal');
+```
+
+### Step 3: Run the Setup Script
+In PowerShell/Terminal in your project directory:
+```powershell
+php setup.php
+```
+
+This single command will:
+- Create all tables: `users`, `listings`, `listing_images`, `favorites`, `inquiries`
+- Seed 5 demo users with different roles (admin, agents, regular users)
+- Seed 12 sample property listings with images
+- Add sample inquiries and favorite relationships
+- All demo accounts use password: `password123`
+
+### Step 4: Start the PHP Development Server
+In PowerShell/Terminal:
+```powershell
+php -S localhost:8000
+```
+
+Expected output:
+```
+[Thu Apr 17 XX:XX:XX 2026] PHP 8.5.1 Development Server started
+Listening on http://localhost:8000
+Document root is C:\Users\MYcom\real-estate-portal
+Press Ctrl-C to quit.
+```
+
+### Step 5: Open the App
+- Launch your browser
+- Navigate to: **`http://localhost:8000`**
+- The homepage should load with all 12 seeded listings and images
+
+### Step 6: Test Features
+
+#### As a Regular User:
+1. Click **Register** → Select "👤 Buyer/Renter"
+2. Create a new account with any email/password (min 8 chars)
+3. Log in with your credentials
+4. Browse listings with the search/filter interface
+5. Click heart icon on any property to favorite it
+6. View your favorites: click "❤️ My Favorites" in navbar
+7. Click any listing → view details, gallery, map, and submit inquiry
+
+#### As an Agent:
+1. Click **Register** → Select "🏢 Agent"
+2. Create an agent account
+3. Log in → access **Agent Dashboard**
+4. View stats: your listings, total inquiries, recent messages
+5. Click **Create Listing** to post a new property
+6. Fill in property details, upload images (up to 5MB each)
+7. View **My Inquiries** to see buyer messages about your listings
+
+#### As an Admin:
+1. Log in with demo admin account:
+   - Email: `admin@estatehub.com`
+   - Password: `password123`
+2. Access **Admin Dashboard**
+3. View platform stats: total listings, users, inquiries
+4. Go to **Listings** → manage all properties (quick status change: active/pending/removed)
+5. Go to **Users** → change user roles, delete accounts
+6. Go to **Inquiries** → view all platform inquiries
+
+### Step 7: Stop the Server
+Press **`Ctrl + C`** in PowerShell/Terminal to stop the development server
+
+---
+
+## 📊 Demo Accounts (Ready to Use)
+
+All passwords: **`password123`**
+
+| Role  | Email                    | Purpose |
+|-------|--------------------------|---------|
+| Admin | admin@estatehub.com      | Manage platform, all users, all listings |
+| Agent | agent1@estatehub.com     | Create/edit own listings, view inquiries |
+| Agent | agent2@estatehub.com     | Create/edit own listings, view inquiries |
+| User  | user1@estatehub.com      | Browse, search, favorite, inquire |
+| User  | user2@estatehub.com      | Browse, search, favorite, inquire |
+
+---
+
+## �📝 License
 
 MIT — free to use, modify, and distribute.
+
